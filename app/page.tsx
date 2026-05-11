@@ -1,11 +1,29 @@
 'use client';
 
-import { useState } from 'react';
-import { ArrowRight, ShieldCheck, Clock, Euro, Ruler, Hammer, MapPin, Mail, User } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { ArrowRight, ShieldCheck, Clock, Euro, Ruler, Hammer, MapPin, Mail, User, Database, Library } from 'lucide-react';
 
 export default function Home() {
   const [checkerResult, setCheckerResult] = useState<{title: string, desc: string} | null>(null);
   const [submitted, setSubmitted] = useState(false);
+  const [stats, setStats] = useState({ artisans: 0, templates: 0 });
+
+  useEffect(() => {
+    async function fetchStats() {
+      try {
+        const [artRes, moldRes] = await Promise.all([
+          fetch('https://app.baget.ai/api/public/databases/cb7a664f-0cbf-424c-8c9d-34ca7e4cf0c8/count'),
+          fetch('https://app.baget.ai/api/public/databases/233c2879-62e5-4d8a-9af7-1d944592b840/count')
+        ]);
+        const artData = await artRes.json();
+        const moldData = await moldRes.json();
+        setStats({ artisans: artData.count, templates: moldData.count });
+      } catch (err) {
+        console.error('Failed to fetch stats', err);
+      }
+    }
+    fetchStats();
+  }, []);
 
   const checkStatus = (e: any) => {
     e.preventDefault();
@@ -80,6 +98,28 @@ export default function Home() {
           <div className="md:col-span-4 hidden md:block">
             <div className="aspect-[3/4] bg-neutral-200 editorial-border flex items-center justify-center rotate-3 group hover:rotate-0 transition-transform duration-700">
                <Hammer className="w-24 h-24 text-black/10 group-hover:text-[#C9A96E]/40 transition-colors" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Database Highlights */}
+      <section className="py-20 bg-white border-y border-black/10">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="flex items-center space-x-8 p-12 editorial-border bg-[#FAFAF7]">
+              <Database className="w-12 h-12 text-[#C9A96E]" />
+              <div>
+                <p className="text-5xl font-serif italic mb-2">{stats.artisans || '5'}+</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] font-bold opacity-60">Verified Master Artisans</p>
+              </div>
+            </div>
+            <div className="flex items-center space-x-8 p-12 editorial-border bg-[#FAFAF7]">
+              <Library className="w-12 h-12 text-[#C9A96E]" />
+              <div>
+                <p className="text-5xl font-serif italic mb-2">{stats.templates || '4'}+</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] font-bold opacity-60">Heritage Molding Profiles</p>
+              </div>
             </div>
           </div>
         </div>
