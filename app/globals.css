@@ -11,10 +11,27 @@
 body {
   background-color: var(--lignum-white);
   color: var(--lignum-charcoal);
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: var(--font-source-sans), sans-serif;
 }
 
-.font-serif { font-family: 'Playfair Display', serif; }
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-playfair), serif;
+}
 
-.editorial-border { border: 0.5px solid var(--lignum-charcoal); }
-.sharp-corners { border-radius: 0 !important; }
+.editorial-border {
+  border: 0.5px solid var(--lignum-charcoal);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.05);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(201, 169, 110, 0.3);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 169, 110, 0.6);
+}
