@@ -30,3 +30,9 @@ export async function getLeads() {
   const data = await res.json();
   return data.rows;
 }
+
+export async function getProjects() {
+  const res = await fetch(`${API_BASE}/c9c42141-cbe9-4f23-9ab9-8ed5880b4a56/rows`, { cache: 'no-store' });
+  const data = await res.json();
+  return data.rows;
+}

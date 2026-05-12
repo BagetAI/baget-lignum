@@ -13,7 +13,8 @@ import {
   ChevronRight,
   ExternalLink,
   CheckCircle2,
-  AlertCircle
+  AlertCircle,
+  LayoutGrid
 } from 'lucide-react';
 import { getLeads, getArtisans, getMoldingCatalog } from '@/app/lib/db';
 
@@ -89,11 +90,18 @@ export default function MatchmakingDashboard() {
             <span className="bg-lignum-charcoal text-white text-[10px] uppercase tracking-widest px-2 py-1">Internal Admin</span>
           </div>
           <div className="flex items-center space-x-8 text-[10px] uppercase tracking-widest font-bold">
+            <a href="/admin/projects" className="flex items-center opacity-50 hover:opacity-100 transition-opacity">
+              <LayoutGrid className="w-3 h-3 mr-2" />
+              Pilot Tracker
+            </a>
+            <a href="/admin/escrow" className="flex items-center opacity-50 hover:opacity-100 transition-opacity">
+              <CheckCircle2 className="w-3 h-3 mr-2" />
+              Escrow
+            </a>
             <div className="flex items-center text-lignum-gold">
               <span className="w-2 h-2 bg-lignum-gold rounded-full mr-2 animate-ping"></span>
               Live Registry Access
             </div>
-            <button className="opacity-50 hover:opacity-100 transition-opacity">Logout</button>
           </div>
         </div>
       </header>
@@ -198,14 +206,17 @@ export default function MatchmakingDashboard() {
             {filteredArtisans.map((artisan, idx) => (
               <div key={idx} className="bg-white editorial-border p-6 flex items-start space-x-4 hover:border-lignum-gold transition-colors">
                 <div className="w-12 h-12 bg-lignum-charcoal/5 flex items-center justify-center shrink-0">
-                  <Users className="w-6 h-6 text-lignum-gold/50" />
+                  <Hammer className="w-6 h-6 text-lignum-gold/50" />
                 </div>
                 <div className="flex-grow">
                   <div className="flex justify-between items-start">
                     <h3 className="font-serif text-lg">{artisan.name}</h3>
-                    <span className="text-[9px] bg-green-50 text-green-700 px-1.5 py-0.5 border border-green-200 uppercase font-bold tracking-widest">
-                      {artisan.active ? 'Available' : 'Assigned'}
-                    </span>
+                    <div className="flex flex-col items-end">
+                      <span className="text-[9px] bg-green-50 text-green-700 px-1.5 py-0.5 border border-green-200 uppercase font-bold tracking-widest mb-1">
+                        {artisan.active ? 'Available' : 'Assigned'}
+                      </span>
+                      <span className="text-[8px] italic opacity-50">{artisan.availability}</span>
+                    </div>
                   </div>
                   <p className="text-[10px] uppercase tracking-widest opacity-60 mb-3">{artisan.certification} | {artisan.specialty_century}</p>
                   <p className="text-xs opacity-80 leading-relaxed mb-4">{artisan.bio}</p>
