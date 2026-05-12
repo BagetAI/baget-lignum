@@ -15,6 +15,8 @@ export async function POST(req: Request) {
       projectName 
     } = await req.json();
 
+    const origin = process.env.NEXT_PUBLIC_URL || 'https://baget-lignum.vercel.app';
+
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: [
@@ -32,8 +34,8 @@ export async function POST(req: Request) {
       ],
       mode: 'payment',
       customer_email: homeownerEmail,
-      success_url: `${process.env.NEXT_PUBLIC_URL || 'http://localhost:3000'}/projects/${projectId}?status=paid`,
-      cancel_url: `${process.env.NEXT_PUBLIC_URL || 'http://localhost:3000'}/projects/${projectId}?status=cancelled`,
+      success_url: `${origin}/pilot/checkout/${projectId}/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${origin}/pilot/checkout/${projectId}?status=cancelled`,
       metadata: {
         projectId,
         type: 'escrow_deposit'

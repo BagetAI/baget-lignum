@@ -10,7 +10,9 @@ import {
   Clock,
   LayoutGrid,
   ChevronRight,
-  ClipboardCheck
+  ClipboardCheck,
+  CreditCard,
+  ExternalLink
 } from 'lucide-react';
 import { getProjects } from '@/app/lib/db';
 
@@ -54,7 +56,7 @@ export default function PilotProjectsDashboard() {
           <div className="flex items-center space-x-8 text-[10px] uppercase tracking-widest font-bold">
             <div className="flex items-center text-[#C9A96E]">
               <span className="w-2 h-2 bg-[#C9A96E] rounded-full mr-2"></span>
-              Tracking 5 Active Units
+              Tracking {projects.length} Active Units
             </div>
             <a href="/admin/matchmaking" className="opacity-50 hover:opacity-100 transition-opacity">Matchmaking</a>
             <a href="/admin/escrow" className="opacity-50 hover:opacity-100 transition-opacity">Escrow</a>
@@ -163,10 +165,20 @@ export default function PilotProjectsDashboard() {
                         <p className="text-[10px] uppercase tracking-widest font-bold opacity-40 mb-1">Escrow Value</p>
                         <p className="text-3xl font-serif italic">€{p.escrow_amount_cents / 100}</p>
                      </div>
-                     <button className="flex items-center space-x-2 text-[10px] uppercase tracking-[0.2em] font-bold text-[#C9A96E] hover:text-black transition-colors group/btn">
-                        <span>View Technical Dossier</span>
-                        <ClipboardCheck className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                     </button>
+                     <div className="flex flex-col items-end space-y-4">
+                        <a 
+                          href={`/pilot/checkout/${p.project_id}`}
+                          className="flex items-center space-x-2 text-[10px] uppercase tracking-[0.2em] font-bold text-[#C9A96E] hover:text-black transition-colors bg-[#C9A96E]/10 px-4 py-2 rounded"
+                        >
+                          <CreditCard className="w-4 h-4 mr-2" />
+                          <span>Portal Pilot Link</span>
+                          <ExternalLink className="w-3 h-3 ml-2" />
+                        </a>
+                        <button className="flex items-center space-x-2 text-[10px] uppercase tracking-[0.2em] font-bold opacity-40 hover:opacity-100 transition-opacity">
+                            <span>View Technical Dossier</span>
+                            <ClipboardCheck className="w-4 h-4" />
+                        </button>
+                     </div>
                   </div>
                 </div>
               </div>
