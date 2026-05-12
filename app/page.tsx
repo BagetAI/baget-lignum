@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { ArrowRight, ShieldCheck, Clock, Euro, Ruler, Hammer, MapPin, Mail, User, Database, Library } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Clock, Euro, TrendingUp, Hammer, MapPin, Mail, User, Database, Library } from 'lucide-react';
+import SavingsCalculator from '@/app/components/SavingsCalculator';
 
 export default function Home() {
   const [checkerResult, setCheckerResult] = useState<{title: string, desc: string} | null>(null);
@@ -90,8 +91,8 @@ export default function Home() {
               <a href="#contact" className="bg-[#1A1A1A] text-white px-12 py-6 text-sm tracking-widest uppercase hover:bg-[#C9A96E] hover:text-black transition-all flex items-center justify-center">
                 Initiate Matchmaking <ArrowRight className="ml-2 w-4 h-4" />
               </a>
-              <a href="#compliance" className="border border-black px-12 py-6 text-sm tracking-widest uppercase hover:bg-black hover:text-white transition-all text-center">
-                Check Status
+              <a href="#calculator" className="border border-black px-12 py-6 text-sm tracking-widest uppercase hover:bg-black hover:text-white transition-all text-center">
+                Calculate Savings
               </a>
             </div>
           </div>
@@ -155,6 +156,15 @@ export default function Home() {
                 <p className="text-sm opacity-70 leading-relaxed">Classified as &apos;Maintenance&apos; by the Architectes des Bâtiments de France. No structural permits required.</p>
             </div>
         </div>
+      </section>
+
+      {/* Calculator Section */}
+      <section id="calculator" className="py-32 px-8 bg-neutral-100/50">
+        <div className="max-w-7xl mx-auto text-center mb-16">
+          <span className="text-[#C9A96E] text-[10px] uppercase tracking-[0.4em] font-bold mb-4 block">Audit your Investment</span>
+          <h2 className="font-serif text-5xl italic tracking-tight">The DPE Restoration <br className="hidden md:block"/>Savings Calculator</h2>
+        </div>
+        <SavingsCalculator />
       </section>
 
       {/* Checker */}
