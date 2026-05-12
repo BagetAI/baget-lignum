@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { ArrowRight, ShieldCheck, Clock, Euro, TrendingUp, Hammer, MapPin, Mail, User, Database, Library } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Clock, Euro, TrendingUp, Hammer, MapPin, Mail, User, Database, Library, Scale } from 'lucide-react';
 import SavingsCalculator from '@/app/components/SavingsCalculator';
 
 export default function Home() {
@@ -69,9 +69,9 @@ export default function Home() {
       <nav className="flex justify-between items-center p-8 border-b border-black/10 sticky top-0 bg-[#FAFAF7]/90 backdrop-blur-md z-50">
         <div className="font-serif text-3xl tracking-tighter font-bold">LIGNUM</div>
         <div className="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.3em] font-bold">
+          <a href="/loophole" className="text-[#C9A96E] hover:text-black transition-colors">The Loophole</a>
           <a href="#philosophy" className="hover:text-[#C9A96E] transition-colors">Philosophy</a>
           <a href="#performance" className="hover:text-[#C9A96E] transition-colors">Performance</a>
-          <a href="#compliance" className="hover:text-[#C9A96E] transition-colors">Compliance</a>
           <a href="#contact" className="bg-[#1A1A1A] text-white px-6 py-2 -my-2 hover:bg-[#C9A96E] hover:text-black transition-all">Start Project</a>
         </div>
       </nav>
@@ -88,18 +88,48 @@ export default function Home() {
               Matchmaking for the &apos;Silver Economy&apos;. We pair retired master joiners with homeowners to solve the DPE energy crisis in historic French properties.
             </p>
             <div className="flex flex-col sm:flex-row gap-8">
-              <a href="#contact" className="bg-[#1A1A1A] text-white px-12 py-6 text-sm tracking-widest uppercase hover:bg-[#C9A96E] hover:text-black transition-all flex items-center justify-center">
-                Initiate Matchmaking <ArrowRight className="ml-2 w-4 h-4" />
+              <a href="/loophole" className="bg-[#C9A96E] text-[#1A1A1A] px-12 py-6 text-sm tracking-widest uppercase font-bold hover:bg-black hover:text-white transition-all flex items-center justify-center">
+                Bypass the Permit <Scale className="ml-2 w-4 h-4" />
               </a>
-              <a href="#calculator" className="border border-black px-12 py-6 text-sm tracking-widest uppercase hover:bg-black hover:text-white transition-all text-center">
-                Calculate Savings
+              <a href="#contact" className="bg-[#1A1A1A] text-white px-12 py-6 text-sm tracking-widest uppercase hover:bg-white hover:text-black hover:border-black border border-transparent transition-all flex items-center justify-center">
+                Initiate Matchmaking <ArrowRight className="ml-2 w-4 h-4" />
               </a>
             </div>
           </div>
           <div className="md:col-span-4 hidden md:block">
-            <div className="aspect-[3/4] bg-neutral-200 editorial-border flex items-center justify-center rotate-3 group hover:rotate-0 transition-transform duration-700">
-               <Hammer className="w-24 h-24 text-black/10 group-hover:text-[#C9A96E]/40 transition-colors" />
+            <div className="aspect-[3/4] bg-[#C9A96E]/10 editorial-border flex items-center justify-center rotate-3 group hover:rotate-0 transition-transform duration-700 overflow-hidden">
+               <Hammer className="w-24 h-24 text-[#C9A96E] opacity-20" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Loophole Feature Section */}
+      <section className="py-32 bg-[#1A1A1A] text-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+          <div className="space-y-8">
+            <span className="text-[#C9A96E] text-[10px] uppercase tracking-[0.5em] font-bold block">Art. 1792-3 Civil Code</span>
+            <h2 className="font-serif text-5xl md:text-7xl italic tracking-tighter leading-none">The 30-Day <br/>Fast-Track.</h2>
+            <p className="text-xl opacity-60 font-serif italic leading-relaxed">
+              Avoid the 6-month ABF permit cycle by classifying your thermal upgrade as &quot;Maintenance & Repair.&quot; 
+            </p>
+            <a href="/loophole" className="inline-flex items-center text-[#C9A96E] uppercase tracking-[0.3em] text-xs font-bold hover:underline">
+              Read the Regulatory Briefing <ArrowRight className="ml-2 w-4 h-4" />
+            </a>
+          </div>
+          <div className="relative">
+             <div className="editorial-border p-12 bg-[#FAFAF7] text-[#1A1A1A] -rotate-2 relative z-10">
+                <Scale className="w-12 h-12 text-[#C9A96E] mb-8" />
+                <h3 className="font-serif text-3xl italic mb-4">The Loophole</h3>
+                <p className="text-sm opacity-70 leading-relaxed mb-8">
+                   We restore the existing sash and install 6mm vacuum glass without altering the structural frame. This legal distinction bypasses the mandatory Déclaration Préalable.
+                </p>
+                <div className="flex justify-between items-center text-[10px] uppercase tracking-widest font-bold border-t border-black/10 pt-8">
+                   <span>Wait Time: 30 Days</span>
+                   <span className="text-green-600">ABF Pre-Approved</span>
+                </div>
+             </div>
+             <div className="absolute inset-0 bg-[#C9A96E] translate-x-4 translate-y-4"></div>
           </div>
         </div>
       </section>
@@ -123,17 +153,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Statement */}
-      <section id="philosophy" className="bg-[#1A1A1A] text-white py-40 px-8 text-center relative overflow-hidden">
-        <div className="max-w-4xl mx-auto relative z-10">
-          <span className="text-[#C9A96E] text-[10px] uppercase tracking-[0.5em] mb-12 block font-bold">The Heritage Loophole</span>
-          <blockquote className="font-serif text-4xl md:text-6xl italic leading-tight mb-16">
-            &quot;Classifying restoration as maintenance reduces insurance costs by 80% and accelerates ABF approval from months to weeks.&quot;
-          </blockquote>
-          <div className="h-px bg-[#C9A96E]/30 w-32 mx-auto"></div>
         </div>
       </section>
 
@@ -165,30 +184,6 @@ export default function Home() {
           <h2 className="font-serif text-5xl italic tracking-tight">The DPE Restoration <br className="hidden md:block"/>Savings Calculator</h2>
         </div>
         <SavingsCalculator />
-      </section>
-
-      {/* Checker */}
-      <section id="compliance" className="py-32 px-8 bg-white border-y border-black/10">
-        <div className="max-w-3xl mx-auto text-center editorial-border p-12 bg-[#FAFAF7]">
-          <h3 className="font-serif text-3xl mb-4 italic text-[#C9A96E]">Heritage Status Checker</h3>
-          <p className="text-[10px] uppercase tracking-widest mb-12 border-b border-black pb-2 inline-block font-bold">Regulatory Intelligence</p>
-          {!checkerResult ? (
-            <form onSubmit={checkStatus} className="space-y-8">
-              <p className="text-sm italic opacity-70">Enter your address to determine if your property falls within a Site Patrimonial Remarquable (SPR).</p>
-              <input name="address" type="text" placeholder="e.g. Rue de Rivoli, Paris" className="w-full border-b border-black py-4 text-center font-serif text-2xl bg-transparent outline-none focus:border-[#C9A96E] transition-colors" />
-              <button className="bg-black text-white px-12 py-4 uppercase tracking-[0.3em] text-sm w-full hover:bg-[#C9A96E] hover:text-black transition-all">Validate Address</button>
-            </form>
-          ) : (
-            <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4">
-              <div className="border border-black p-8 text-left bg-white">
-                <h4 className="font-serif text-2xl mb-2 italic underline decoration-[#C9A96E]">{checkerResult.title}</h4>
-                <p className="text-sm opacity-70 leading-relaxed">{checkerResult.desc}</p>
-              </div>
-              <button onClick={() => setCheckerResult(null)} className="text-xs uppercase underline tracking-widest opacity-50 hover:opacity-100">Check another address</button>
-              <a href="#contact" className="block bg-[#C9A96E] text-black px-12 py-4 uppercase tracking-[0.3em] text-sm w-full hover:bg-black hover:text-white transition-all">Download Dossier</a>
-            </div>
-          )}
-        </div>
       </section>
 
       {/* Form */}
