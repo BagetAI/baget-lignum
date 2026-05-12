@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Jean-Pierre Leroy",
+    "specialty_century": "19th Century Haussmannian",
+    "region": "Paris (75)",
+    "certification": "Compagnon du Devoir",
+    "bio": "35 years of experience in the 7th and 8th arrondissements. Expert in 'Mouton et Gueule de Loup' joints and slim-glazing bed optimization.",
+    "active": true
+  },
+  {
+    "name": "Christophe Bénard",
+    "specialty_century": "18th & 19th Century Art Joinery",
+    "region": "Paris (75)",
+    "certification": "Master Artisan (EPV)",
+    "bio": "Former director of an EPV-labeled firm. Specialized in the preservation of rare glass and historical hardware.",
+    "active": true
+  },
+  {
+    "name": "Pascal Turpin",
+    "specialty_century": "19th Century Oak Frames",
+    "region": "Paris (75)",
+    "certification": "Maître Menuisier",
+    "bio": "Expert in mechanical restoration of large-format casements. Owns a library of 14 proprietary Haussmannian molding planes.",
+    "active": true
+  },
+  {
+    "name": "Gilles Dupuis",
+    "specialty_century": "18th Century Bordeaux Facades",
+    "region": "Bordeaux (33)",
+    "certification": "Compagnon du Devoir",
+    "bio": "UNESCO zone specialist. Master of the 'Grand Cadre' profile and historical timber consolidation using heritage resins.",
+    "active": true
+  },
+  {
+    "name": "Hans Müller",
+    "specialty_century": "Germanic 19th Century / Neustadt",
+    "region": "Strasbourg (67)",
+    "certification": "Maître Artisan",
+    "bio": "Expert in high-performance thermal gaskets for heritage frames. Specialist in the heavy oak joinery of the Neustadt district.",
+    "active": true
+  },
+  {
+    "name": "Yves Duchamp",
+    "specialty_century": "Renaissance & 17th Century",
+    "region": "Lyon (69)",
+    "certification": "Compagnon du Devoir",
+    "bio": "Specialist in the heavy timber frames of Vieux Lyon. Expert in structural reinforcement without visible modification.",
+    "active": true
+  },
+  {
+    "name": "Jean-François Merceron",
+    "specialty_century": "18th Century Neoclassical",
+    "region": "Nantes (44)",
+    "certification": "Maître Menuisier",
+    "bio": "Focus on the Graslin and Centre-Ville districts. Expert in moisture-resistant oak restoration for the Loire climate.",
+    "active": true
+  },
+  {
+    "name": "Luc Clavey",
+    "specialty_century": "Fineo Vacuum Glass Retrofits",
+    "region": "Lyon (69)",
+    "certification": "Expert Menuisier",
+    "bio": "Early adopter of vacuum-insulated glass in heritage frames. Proprietary routing jig for 6mm glass beds.",
+    "active": true
+  },
+  {
+    "name": "Marc Lefebvre",
+    "specialty_century": "18th Century Hardware",
+    "region": "Bordeaux (33)",
+    "certification": "Compagnon du Devoir",
+    "bio": "Restores original Crémone bolts and espagnolettes. Owns the largest private collection of 18th-century window hardware in SW France.",
+    "active": true
+  },
+  {
+    "name": "Bernard Frizza",
+    "specialty_century": "Directoire & Empire Profiles",
+    "region": "Paris (75)",
+    "certification": "Master Carver",
+    "bio": "Expert in reproducing rare molding profiles using traditional hand-planes. Consultant for ABF compliance dossiers.",
+    "active": true
+  },
+  {
+    "name": "Philippe Gosselin",
+    "specialty_century": "Timber Consolidation",
+    "region": "Bordeaux (33)",
+    "certification": "Maître Artisan",
+    "bio": "Expert in non-structural wood rot repair. Uses heritage resins to preserve 80% of original frame material.",
+    "active": true
+  },
+  {
+    "name": "Robert Schilt",
+    "specialty_century": "19th Century Alsace Timber",
+    "region": "Strasbourg (67)",
+    "certification": "Compagnon du Devoir",
+    "bio": "Specialist in the historic joinery of the Petite France and Neustadt zones. Expert in traditional weatherstripping.",
+    "active": true
+  },
+  {
+    "name": "Alain Petit",
+    "specialty_century": "19th Century Coastal Oak",
+    "region": "Nantes (44)",
+    "certification": "Expert Menuisier",
+    "bio": "Focused on the maintenance of neoclassical maritime properties. Expert in salt-resistant timber treatments.",
+    "active": true
+  },
+  {
+    "name": "Thierry Giraud",
+    "specialty_century": "Louis XV & Rococo Profiles",
+    "region": "Bordeaux (33)",
+    "certification": "Maître Artisan",
+    "bio": "Master of the complex 'Doucine' and 'Talon' profiles. Owns rare 18th-century molding planes passed down for 3 generations.",
+    "active": true
+  },
+  {
+    "name": "Pierre-Yves Angelini",
+    "specialty_century": "ABF Compliance Strategy",
+    "region": "Paris (75)",
+    "certification": "Former ABF Liaison",
+    "bio": "Advises on project classification as 'Entretien'. Specializes in the technical dossiers required for the 1st-6th Arrondissements.",
+    "active": true
+  },
+  {
+    "name": "Jacques Goujat",
+    "specialty_century": "Counterweight & Sash Systems",
+    "region": "Lyon (69)",
+    "certification": "Maître Menuisier",
+    "bio": "Expert in the mechanical calibration of guillotine and counterweight windows. Master of fluid sash movement.",
+    "active": true
+  },
+  {
+    "name": "Michel Viguier",
+    "specialty_century": "High-Performance Slim Glazing",
+    "region": "Paris (75)",
+    "certification": "Compagnon du Devoir",
+    "bio": "Specialist in the integration of Fineo glass into 14mm rebates. Developed a 'no-vibration' routing technique for old oak.",
+    "active": true
+  },
+  {
+    "name": "Stéphane Brossard",
+    "specialty_century": "Heritage Timber Audits",
+    "region": "Nantes (44)",
+    "certification": "Expert Consultant",
+    "bio": "Performs technical triage for the Lignum pilot program. Expert in identifying rot-free 'dormants' for restoration eligibility.",
+    "active": true
+  },
+  {
+    "name": "Dominique Perrault",
+    "specialty_century": "Thermal Gasket Engineering",
+    "region": "Strasbourg (67)",
+    "certification": "Maître Artisan",
+    "bio": "Developed 'invisible' silicone seals for heritage casements. Bypasses DPE drafts without altering the facade profile.",
+    "active": true
+  },
+  {
+    "name": "Hubert Valeri",
+    "specialty_century": "19th Century Parisian Molding",
+    "region": "Paris (75)",
+    "certification": "Master Artisan",
+    "bio": "Consultant on aesthetic purity for high-net-worth clients. Owns a proprietary collection of Haussmannian 'Doucine' planes.",
+    "active": true
+  }
+]
